@@ -1,0 +1,10 @@
+.row
+  %form.col.s12
+    .row
+      .input-field.col.s6
+        %input#input_text{"data-length" => "10", :type => "text"}/
+        %label{:for => "input_text"} Title
+    .row
+      .input-field.col.s12
+        %textarea#textarea2.materialize-textarea{"data-length" => "120"}
+        %label{:for => "textarea2"} Textarea
