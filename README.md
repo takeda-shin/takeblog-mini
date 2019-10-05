@@ -36,6 +36,7 @@ Things you may want to cover:
 ## articlesテーブル
 |column|Type|Options|
 |------|----|-------|
+|title|string|null: false|
 |text|text|null: false|
 |user_id|integer|null: false, foreign_key: true|
 
