@@ -1,2 +1,3 @@
 .rows
-   = render partial: "row"      
+  - @article.each do |article|
+    = render partial: "row", locals: { article: article }

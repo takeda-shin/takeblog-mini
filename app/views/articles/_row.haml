@@ -3,13 +3,15 @@
     .card.orange.darken-3
       .card-content.white-text
         .card-content__upper-info
-          %span.card-title Card Title
-          %span.user-name User Name
-          %span.date 2019/10/05 20:00:00
+          %span.card-title 
+            = article.title
+          %span.user-name
+            = article.user_id
+          %span.date
+            = article.created_at
         .card-content__text
         %p
-          I am a very simple card. I am good at containing small bits of information.
-          I am convenient because I require little markup to use effectively.
+          = simple_format(article.text)
       .card-action
         %a{:href => "#"} edit
         %a{:href => "#"} destroy 
