@@ -1,0 +1,21 @@
+.row {
+  .col.s12.m6 {
+    margin: 0 auto;
+    float: none;
+    .card.orange.darken-3{
+      .card-content.white-text {
+        .card-content__upper-info {
+          border-bottom: 1px solid #fff;
+          .user-name {
+            padding-right: 20px;
+          }
+        }
+        .card-content__text {
+        }
+      }
+    }
+      .card-action {
+        border-top: 1px solid #fff;
+      }
+  }
+}
