@@ -9,11 +9,12 @@ class ArticlesController < ApplicationController
   end
 
   def create
-    Article.create(create_params)
-    redirect_to action: :index
+    Article.create(article_params)
+    redirect_to root_path
   end
-
-  def create_params
+  
+  private
+  def article_params
     params.require(:article).permit(:title, :text)
   end
 
