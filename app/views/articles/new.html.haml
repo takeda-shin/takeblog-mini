@@ -1,12 +1,12 @@
 .row
   %form.col.s12
-    .row
-      .input-field.col.s6
-        %input#input_text{"data-length" => "10", :type => "text"}/
-        %label.active{:for => "input_text"} Title
-    .row
-      .input-field.col.s12
-        %textarea#textarea2.materialize-textarea{"data-length" => "1000"}
-        %label.active{:for => "textarea2"} Content
-      %button.btn.waves-effect.waves-light.orange.darken-4{:name => "action", :type => "submit"}
-        Submit >>
+    = form_for (@article) do |f|
+      .row
+        .input-field.col.s6
+          = f.text_field :title, class: "input_text"
+          = f.label :title, class: "active"
+      .row
+        .input-field.col.s12
+          = f.text_area :text, class: "textarea2 materialize-textarea"
+          = f.label :centent, class: "active"
+      = f.submit class: "btn waves-effect waves-light orange darken-4"
