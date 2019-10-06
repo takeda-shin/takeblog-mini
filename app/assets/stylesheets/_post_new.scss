@@ -1,0 +1,25 @@
+.row {
+  width: 60vw;
+  min-width: 450px;
+  padding-top:20px;
+  .col.s12 {
+    .row {
+      .input-field.col.s6{
+        .input-text {
+        }
+        .active{
+          font-size: 20px;
+        }
+      }
+    }
+    .row {
+      .input-field.col.s12{
+        .textarea2.materialize-textarea{
+        }
+        .active{
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
