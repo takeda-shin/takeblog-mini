@@ -1,3 +1,4 @@
 .rows
-  - @article.each do |article|
+  - @articles.each do |article|
     = render partial: "row", locals: { article: article }
+  = paginate(@articles)
