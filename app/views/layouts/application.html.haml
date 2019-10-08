@@ -16,29 +16,17 @@
   %body
     %nav
       .nav-wrapper.orange.darken-4
-        %a.brand-logo{:href => "#"} Takeblog
+        %a.brand-logo{:href => "/"} Takeblog
         - if user_signed_in?
           %ul#nav-mobile.right.hide-on-med-and-down
             %li
-              %a{:href => "badges.html"} Signout
+              =link_to "ログアウト", destroy_user_session_path, method: :delete
             %li
-              %a{:href => "collapsible.html"} New
+              %a{:href => "/articles/new"} 新規投稿
         - else
           %ul#nav-mobile.right.hide-on-med-and-down
             %li
-              %a{:href => "sass.html"} Signin
+              =link_to "ログイン", new_user_session_path, method: :post
             %li
-              %a{:href => "collapsible.html"} SignUp
+              =link_to "新規登録", new_user_registration_path, method: :get
     = yield
-
-    -# %nav
-    -#   .nav-wrapper.orange.darken-4
-    -#     %a.brand-logo{:href => "#"} Takeblog
-    -#     %ul#nav-mobile.right.hide-on-med-and-down
-    -#       %li
-    -#         %a{:href => "sass.html"} Signin
-    -#       %li
-    -#         %a{:href => "badges.html"} Signout
-    -#       %li
-    -#         %a{:href => "collapsible.html"} New
-    -# = yield
