@@ -13,5 +13,5 @@
         %p
           = simple_format(article.text)
       .card-action
-        %a{:href => "#"} edit
+        =link_to "edit", "/articles/#{article.id}/edit", method: :get
         =link_to "destroy", "/articles/#{article.id}", method: :delete

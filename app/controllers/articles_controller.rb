@@ -20,6 +20,18 @@ class ArticlesController < ApplicationController
     article.destroy if article.user_id == current_user.id
     redirect_to action: :index
   end
+
+  def edit
+    @articles = Article.find(params[:id])
+  end
+
+  def update
+    article = Article.find(params[:id])
+    if article.user_id == current_user.id
+      article.update(article_params)
+    end
+    redirect_to action: :index
+  end
   
   private
   def article_params

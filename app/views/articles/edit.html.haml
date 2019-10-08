@@ -1,0 +1,12 @@
+.row
+  .col.s12
+    = form_for @articles do |f|
+      .row
+        .input-field.col.s6
+          = f.text_field :title, class: "input_text"
+          = f.label :title, class: "active"
+      .row
+        .input-field.col.s12
+          = f.text_area :text, class: "textarea2 materialize-textarea"
+          = f.label :text, class: "active"
+      = f.submit "修正する", class: "btn waves-effect waves-light orange darken-4"
