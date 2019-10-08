@@ -14,4 +14,4 @@
           = simple_format(article.text)
       .card-action
         %a{:href => "#"} edit
-        %a{:href => "#"} destroy 
+        =link_to "destroy", "/articles/#{article.id}", method: :delete
