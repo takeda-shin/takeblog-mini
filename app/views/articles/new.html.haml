@@ -1,6 +1,6 @@
 .row
-  %form.col.s12
-    = form_for (@articles) do |f|
+  .col.s12
+    = form_for @articles do |f|
       .row
         .input-field.col.s6
           = f.text_field :title, class: "input_text"
@@ -9,4 +9,4 @@
         .input-field.col.s12
           = f.text_area :text, class: "textarea2 materialize-textarea"
           = f.label :text, class: "active"
-      = f.submit class: "btn waves-effect waves-light orange darken-4"
+      = f.submit "投稿する", class: "btn waves-effect waves-light orange darken-4"
