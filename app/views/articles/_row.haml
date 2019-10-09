@@ -12,6 +12,9 @@
         .card-content__text
         %p
           = simple_format(article.text)
-      .card-action
-        =link_to "edit", "/articles/#{article.id}/edit", method: :get
-        =link_to "destroy", "/articles/#{article.id}", method: :delete
+      - if user_signed_in?
+        .card-action
+          =link_to "edit", "/articles/#{article.id}/edit", method: :get
+          =link_to "destroy", "/articles/#{article.id}", method: :delete
+      - else
+        
