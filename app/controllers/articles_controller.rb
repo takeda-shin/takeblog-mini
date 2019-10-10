@@ -12,7 +12,6 @@ class ArticlesController < ApplicationController
 
   def create
     Article.create(title: article_params[:title], text: article_params[:text], user_id: current_user.id)
-    redirect_to action: :index
   end
 
   def destroy
@@ -30,7 +29,7 @@ class ArticlesController < ApplicationController
     if article.user_id == current_user.id
       article.update(article_params)
     end
-    redirect_to action: :index
+    # redirect_to action: :index
   end
   
   private

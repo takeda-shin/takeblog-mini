@@ -13,7 +13,7 @@
         %p
           = simple_format(article.text)
       - if user_signed_in?
-        .card-action
-          =link_to "edit", "/articles/#{article.id}/edit", method: :get
-          =link_to "destroy", "/articles/#{article.id}", method: :delete
+        .card-action.white-text
+          =link_to "編集", "/articles/#{article.id}/edit", method: :get
+          =link_to "削除", "/articles/#{article.id}", method: :delete
       - else
